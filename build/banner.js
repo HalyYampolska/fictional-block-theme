@@ -20,6 +20,16 @@ module.exports = window["React"];
 
 module.exports = window["wp"]["blockEditor"];
 
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["blocks"];
+
 /***/ })
 
 /******/ 	});
@@ -101,10 +111,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__);
 
 
-wp.blocks.registerBlockType("ourblocktheme/banner", {
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.registerBlockType)("ourblocktheme/banner", {
   title: "Banner",
+  // For Full Screen Banner 
+  supports: {
+    align: ["full"]
+  },
+  attributes: {
+    align: {
+      type: "string",
+      default: "full"
+    }
+  },
   edit: EditComponent,
   save: SaveComponent
 });

@@ -1,7 +1,15 @@
 import { InnerBlocks } from "@wordpress/block-editor"
+import { registerBlockType } from "@wordpress/blocks"
 
-wp.blocks.registerBlockType("ourblocktheme/banner", {
+registerBlockType("ourblocktheme/banner", {
     title: "Banner",
+    // For Full Screen Banner 
+    supports: {
+      align: ["full"]
+    }, 
+    attributes: {
+      align: {type: "string", default: "full"}
+    },
     edit: EditComponent,
     save: SaveComponent
   })
