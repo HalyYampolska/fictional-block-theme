@@ -199,3 +199,4 @@ function makeNotePrivate($data, $postarr) {
 
   new JSXBlock('banner');
   new JSXBlock('genericheading');
+  new JSXBlock('genericbutton');
