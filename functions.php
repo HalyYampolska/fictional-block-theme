@@ -256,3 +256,20 @@ class PlaceholderBlock {
   new JSXBlock('genericbutton');
   new JSXBlock('slideshow', true);
   new JSXBlock('slide', true, ['themeimagepath' => get_theme_file_uri('/images/')]);
+
+  function myallowedblocks($allowed_block_types, $editor_content) {
+    // Exemple Of Using On the Some Page 
+    /*if ( $editor_content->post->post_type == "professor" ) {
+        return array('core/paragraph', 'core/list');
+    }*/
+
+    // If You Are On a Page/Post Editor Screen
+    if (!empty($editor_content->post)) {
+        return $allowed_block_types;
+    }
+
+    // If You Are On The FSE Screen
+    return array('ourblocktheme/header', 'ourblocktheme/footer');    
+  }
+
+  add_filter('allowed_block_types_all', 'myallowedblocks', 10, 2); 
