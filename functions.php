@@ -207,6 +207,9 @@ class PlaceholderBlock {
   new PlaceholderBlock("eventsandblogs");
   new PlaceholderBlock("header");
   new PlaceholderBlock("footer");
+  new PlaceholderBlock("singlepost");
+  new PlaceholderBlock("page");
+  new PlaceholderBlock("blogindex");
 
 
 // Register All Types Of Blocks
