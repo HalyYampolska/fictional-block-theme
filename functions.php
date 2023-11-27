@@ -210,6 +210,10 @@ class PlaceholderBlock {
   new PlaceholderBlock("singlepost");
   new PlaceholderBlock("page");
   new PlaceholderBlock("blogindex");
+  new PlaceholderBlock("programarchive");
+  new PlaceholderBlock("singleprogram");
+  new PlaceholderBlock("singleprofessor");
+  new PlaceholderBlock("mynotes");
 
 
 // Register All Types Of Blocks
